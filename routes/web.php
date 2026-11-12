@@ -8,7 +8,7 @@ use App\Http\Controllers\ReporteController;
 use App\Http\Middleware\SoloAdmin;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn () => redirect()->route('kiosco.index'));
+Route::get('/', fn () => view('inicio'))->name('inicio');
 
 // Kiosco (ciudadano)
 Route::get('/kiosco', [KioscoController::class, 'index'])->name('kiosco.index');
